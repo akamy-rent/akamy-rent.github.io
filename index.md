@@ -8,7 +8,11 @@ The Solution
 ### The Solution
 Solution is to utilize smart contracts to create a renter/rentee framework that would allow participants to enter an agreement with less uncertainty that they’re not going to get screwed over. This will also provide a single market place where landlords can post their properties and students can browse them.
 
-### Mockup Pages
+### System Components and Features
+
+<img src="./docs/concept/system-components.png">
+
+#### Mockup Pages
 
 - Landing Page
   - Current Market
@@ -24,7 +28,7 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
   - User Profiles:
     - Account balances: to make sure no one is going to be ripped off.
 
-### Use Cases
+#### Use Cases
 
 
 - Smart Contracts
@@ -34,6 +38,12 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
 - Landlord smart contract creation
 - Renters are able to add renters insurance?
 - Students login to browse properties listed and description of those properties.
+
+<img src="./docs/concept/component-definition.png">
+
+#### Smart Contract Implementation
+
+<img src="./docs/concept/smart-contract-implementation.png">
 
 ### Beyond the Basics
 
