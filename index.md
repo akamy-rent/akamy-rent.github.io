@@ -1,4 +1,4 @@
-## Smart Rental
+## EZ Rent
 
 ### The Problem
 
