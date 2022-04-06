@@ -1,5 +1,16 @@
 ## EZ Rent
 
+### Project Team
+
+| Name              | Role              |
+|-------------------|-------------------|
+| Beemnet Alemayehu | Software Engineer |
+| Devin Eng         | Software Engineer |
+| Hoku Tobin        | Product Owner     |
+| Holm Smidt        | Software Engineer |
+| Yang Qian         | Software Engineer |
+
+
 ### The Problem
 
 Renters and homeowners entering a contractual agreement will sometimes be overly cautious about entering the deal. Not only that but people who get into disputes need an immutable record to rely upon. This is especially true when it comes to students attempting to find housing.
