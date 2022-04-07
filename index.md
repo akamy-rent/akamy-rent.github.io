@@ -60,10 +60,10 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
 
 <h4 class="ui centered header">Renter examples</h4>
 
-<h5 class="ui centered header">Rentable listings/h5>
+<h5 class="ui centered header">Rentable listings</h5>
 <img src="./docs/mockups/listings.png">
 
-<h5 class="ui centered header">Rentable listings/h5>
+<h5 class="ui centered header">Rentable listings</h5>
 <img src="./docs/mockups/contract-negotiator.png">
 
 
