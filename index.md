@@ -2,13 +2,13 @@
 
 ### Project Team
 
-| Name              | Role              |
-|-------------------|-------------------|
-| Beemnet Alemayehu | Software Engineer |
-| Devin Eng         | Software Engineer |
-| Hoku Tobin        | Product Owner     |
-| Holm Smidt        | Software Engineer |
-| Yang Qian         | Software Engineer |
+| Image                                                                                                                      | Name              | Role              |
+|----------------------------------------------------------------------------------------------------------------------------|-------------------|-------------------|
+| <img src="https://avatars.githubusercontent.com/u/97714392?s=96&v=4" style="border-radius:50%" width="100" height="auto" > | Beemnet Alemayehu | Software Engineer  |
+| <img src="https://avatars.githubusercontent.com/u/89666809?s=96&v=4" style="border-radius:50%" width="100" height="auto">  | Devin Eng         | Software Engineer |
+| <img src="https://avatars.githubusercontent.com/u/35468353?s=96&v=4" style="border-radius:50%" width="100" height="auto">  | Hoku Tobin        | Product Owner     |
+| <img src="https://avatars.githubusercontent.com/u/5220099?s=96&v=4" style="border-radius:50%" width="100" height="auto">   | Holm Smidt        | Software Engineer |
+| <img src="https://avatars.githubusercontent.com/u/46771381?s=96&v=4" style="border-radius:50%" width="100" height="auto">                           | Yang Qian         | Software Engineer |
 
 
 ### The Problem
