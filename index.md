@@ -39,8 +39,35 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
   - User Profiles:
     - Account balances: to make sure no one is going to be ripped off.
 
-#### Use Cases
+#### M1 mockups
 
+<h4 class="ui centered header">Homeowner examples</h4>
+
+<h5 class="ui centered header">Landing page</h5>
+<img src="./docs/mockups/landing.png">
+
+<h5 class="ui centered header">Homeowner homepage</h5>
+<img src="./docs/mockups/homeowner-login.png">
+
+<h5 class="ui centered header">Homeowner Property Overview</h5>
+<img src="./docs/mockups/homeowner-rentals.png">
+
+<h5 class="ui centered header">Homeowner Contract editor/h5>
+<img src="./docs/mockups/contract-editor.png">
+
+<h5 class="ui centered header">Homeowner Contract editor/h5>
+<img src="./docs/mockups/contract-editor.png">
+
+<h4 class="ui centered header">Renter examples</h4>
+
+<h5 class="ui centered header">Rentable listings/h5>
+<img src="./docs/mockups/listings.png">
+
+<h5 class="ui centered header">Rentable listings/h5>
+<img src="./docs/mockups/contract-negotiator.png">
+
+
+#### Use Cases
 
 - Smart Contracts
   - Track payment/deposits/fees
