@@ -40,32 +40,31 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
     - Account balances: to make sure no one is going to be ripped off.
 
 #### M1 mockups
-
-<h4 class="ui centered header">Homeowner examples</h4>
-
-<h5 class="ui centered header">Landing page</h5>
+<p align="center">
+<h4>Homeowner examples</h4>
+<h5>Landing page</h5>
 <img src="./docs/mockups/landing.png">
 
-<h5 class="ui centered header">Homeowner homepage</h5>
+<h5>Homeowner homepage</h5>
 <img src="./docs/mockups/homeowner-login.png">
 
-<h5 class="ui centered header">Homeowner Property Overview</h5>
+<h5>Homeowner Property Overview</h5>
 <img src="./docs/mockups/homeowner-rentals.png">
 
-<h5 class="ui centered header">Homeowner Contract editor/h5>
+<h5>Homeowner Contract editor</h5>
 <img src="./docs/mockups/contract-editor.png">
 
-<h5 class="ui centered header">Homeowner Contract editor</h5>
+<h5>Homeowner Contract editor</h5>
 <img src="./docs/mockups/contract-editor.png">
 
-<h4 class="ui centered header">Renter examples</h4>
+<h4>Renter examples</h4>
 
-<h5 class="ui centered header">Rentable listings</h5>
+<h5>Rentable listings</h5>
 <img src="./docs/mockups/listings.png">
 
-<h5 class="ui centered header">Rentable listings</h5>
+<h5>Rentable listings</h5>
 <img src="./docs/mockups/contract-negotiator.png">
-
+</p>
 
 #### Use Cases
 
