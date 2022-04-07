@@ -55,7 +55,7 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
 <h5 class="ui centered header">Homeowner Contract editor/h5>
 <img src="./docs/mockups/contract-editor.png">
 
-<h5 class="ui centered header">Homeowner Contract editor/h5>
+<h5 class="ui centered header">Homeowner Contract editor</h5>
 <img src="./docs/mockups/contract-editor.png">
 
 <h4 class="ui centered header">Renter examples</h4>
