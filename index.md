@@ -1,3 +1,7 @@
+<style type="text/css">
+   th, td { text-align: right; }
+</style>
+
 ## EZ Rent
 
 ### Project Team
@@ -40,28 +44,28 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
     - Account balances: to make sure no one is going to be ripped off.
 
 #### M1 mockups
-<p align="center">
-  <h4>Homeowner examples</h4>
-  <h5>Landing page</h5>
-  <img src="./docs/mockups/landing.png">
 
-  <h5>Homeowner homepage</h5>
-  <img src="./docs/mockups/homeowner-login.png">
+<h4>Homeowner examples</h4>
 
-  <h5>Homeowner Property Overview</h5>
-  <img src="./docs/mockups/homeowner-rentals.png">
+<h5>Landing page</h5>
+<img src="./docs/mockups/landing.png">
 
-  <h5>Homeowner Contract editor</h5>
-  <img src="./docs/mockups/contract-editor.png">
+<h5>Homeowner homepage</h5>
+<img src="./docs/mockups/homeowner-login.png">
 
-  <h4>Renter examples</h4>
+<h5>Homeowner Property Overview</h5>
+<img src="./docs/mockups/homeowner-rentals.png">
 
-  <h5>Renter negotiating mockup</h5>
-  <img src="./docs/mockups/listings.png">
+<h5>Homeowner Contract editor</h5>
+<img src="./docs/mockups/contract-editor.png">
 
-  <h5>Rentable listings</h5>
-  <img src="./docs/mockups/contract-negotiator.png">
-</p>
+<h4>Renter examples</h4>
+
+<h5>Potential listings</h5>
+<img src="./docs/mockups/listings.png">
+
+<h5>Negotiator component</h5>
+<img src="./docs/mockups/contract-negotiator.png">
 
 #### Use Cases
 
