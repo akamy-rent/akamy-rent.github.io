@@ -2,7 +2,13 @@
    th, td { text-align: right; }
 </style>
 
-## EZ Rent
+## AkaMy-Rent
+[AkaMy-Rent organization page repository](https://github.com/akamy-rent/akamy-rent.github.io)
+[AkaMy-Rent project repository](https://github.com/akamy-rent/akamy-rent)
+
+
+### Table of Contents
+TBD
 
 ### Project Team
 
@@ -14,36 +20,23 @@
 | <img src="https://avatars.githubusercontent.com/u/5220099?s=96&v=4" style="border-radius:50%" width="100" height="auto">   | Holm Smidt        | Software Engineer |
 | <img src="https://avatars.githubusercontent.com/u/46771381?s=96&v=4" style="border-radius:50%" width="100" height="auto">                           | Yang Qian         | Software Engineer |
 
+### Team contract
+[Contract Link](https://docs.google.com/document/d/1h5UtweWjmoHZck7WArDCLBgyvddvCbIGD888rXcvB6Y/edit?usp=sharing)
 
 ### The Problem
 
-Renters and homeowners entering a contractual agreement will sometimes be overly cautious about entering the deal. Not only that but people who get into disputes need an immutable record to rely upon. This is especially true when it comes to students attempting to find housing.
-The Solution
+Finding housing during University can be stressful for students. Homeowners are cautious when dealing with students as the rental agreements tend to be shorter, and having to consistently find a tenant can also be stressful.
 
 ### The Solution
-Solution is to utilize smart contracts to create a renter/rentee framework that would allow participants to enter an agreement with less uncertainty that they’re not going to get screwed over. This will also provide a single market place where landlords can post their properties and students can browse them.
+AkaMy-Rent hopes to provide a framework that allows rental agreements to be: more accessible, easier to make, and provide a greater level of assurance for both homeowners and renters. Renters can benefit by having an assured rental cost that won't go up so long as their contract is valid. Homeowners can benefit by using the automated features of a smart contract and the Ethereum blockchain to ensure that rent comes in on time and can be fully paid.
 
 ### System Components and Features
 
 <img src="./docs/concept/system-components.png">
 
-#### Mockup Pages
+#### Initial Brainstorm
 
-- Landing Page
-  - Current Market
-  - Sign-up/sign-in prompt
-- User home page
-  - Option to create smart contract
-  - Brief overview of current smart contracts
-    - Who is involved with the contract, how much each monthly payments is, etc… 
-  - Renter
-  - Both
-    - View smart contract information: Accounts for transferring currency, smart contract expiration date.
-- Admin home page
-  - User Profiles:
-    - Account balances: to make sure no one is going to be ripped off.
-
-#### M1 mockups
+#### Brainstorming Mockups
 
 <h4>Homeowner examples</h4>
 
@@ -70,13 +63,18 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
 #### Use Cases
 
 - Smart Contracts
-  - Track payment/deposits/fees
-  - Track maintenance notes
-- Landlords login into update properties/profile
-- Landlord smart contract creation
-- Renters are able to add renters insurance?
-- Students login to browse properties listed and description of those properties.
+  - Participants
+  - payment period
+  - payment frequency
+  - contract time length
+- Users login to view
+  - smart contract status
+  - smart contract summary
+  - expenses from rentel per month
+  - income from rentals per month
+- Homeowner smart contract creation
 
+### Application Component definition, used as a guide to create application creation
 <img src="./docs/concept/component-definition.png">
 
 #### Smart Contract Implementation
@@ -85,4 +83,25 @@ Solution is to utilize smart contracts to create a renter/rentee framework that 
 
 ### Beyond the Basics
 
-This would be done using smart contracts which are immutable programs that are set on the network. Smart contracts can be used to create an agreement between the renter and landlord. This means that the timing of payments will happen in perpetuity until the smart contract exists or is removed. The only way to change the smart contract is by creating a new one.
+- Smart contracts are immutable programs that can be used by the Ethereum blockchain. They cannot be changed once they are deployed therefore it is a sound commitment by both parties. 
+- Solidity: Language that smart contracts will be written in
+  - Solc: Solidity compiler, used to compile smart contracts to return the ABI and Bytecode of a smart contract
+    - ABI: Application Binary Interface
+      - An array of function definitions to be used by our application
+    - Bytecode:
+      - Bytecode that is read by the Ethereum Virtual Machine, this project does not go further in depth of the EVM
+- Ethersjs
+  - Javascript library that's developed to use smart contracts. It's easy for beginners, and allows for simple contracts to be created and deployed
+- Python compiler server
+  - Meteor is unable to utilize Solc internally, so all smart contracts will be compiled by a python script on a server external to the app
+- Ethereum network
+  - Using the Ganache application by HardHat as a test network
+    - Simulated the Ethereum blockchain
+    - Keep track of transactions easily 
+    - Has a GUI for ease of use
+  - May possibly create an assortment of dummy accounts with metamask and utilize Ethereum test networks that are available. 
+
+## Milestone 1
+[M1 project board](https://github.com/akamy-rent/akamy-rent/projects/1)
+
+### Meteor Mockups
