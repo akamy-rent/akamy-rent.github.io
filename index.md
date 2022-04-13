@@ -2,13 +2,15 @@
    th, td { text-align: right; }
 </style>
 
-## AkaMy-Rent
+## AkaMy-Rent project pages
 [AkaMy-Rent organization page repository](https://github.com/akamy-rent/akamy-rent.github.io)
 [AkaMy-Rent project repository](https://github.com/akamy-rent/akamy-rent)
 
 
 ### Table of Contents
-TBD
+[Creating app concepts](#Initial-Brainstorm)
+[Milestone 1](#Milestone-1)
+[Milestone 2](#Milestone-2)
 
 ### Project Team
 
@@ -104,5 +106,10 @@ AkaMy-Rent hopes to provide a framework that allows rental agreements to be: mor
 
 ## Milestone 1
 [M1 project board](https://github.com/akamy-rent/akamy-rent/projects/1)
+[Deployment to digital Ocean](161.35.148.180)
 
 ### Meteor Mockups
+
+
+## Milestone 2
+[M2 project board](https://github.com/akamy-rent/akamy-rent/projects/2)
