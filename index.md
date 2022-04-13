@@ -30,11 +30,12 @@ Finding housing during University can be stressful for students. Homeowners are 
 ### The Solution
 AkaMy-Rent hopes to provide a framework that allows rental agreements to be: more accessible, easier to make, and provide a greater level of assurance for both homeowners and renters. Renters can benefit by having an assured rental cost that won't go up so long as their contract is valid. Homeowners can benefit by using the automated features of a smart contract and the Ethereum blockchain to ensure that rent comes in on time and can be fully paid.
 
-### System Components and Features
+### Initial Brainstorm
+
+
+#### System Components and Features
 
 <img src="./docs/concept/system-components.png">
-
-#### Initial Brainstorm
 
 #### Brainstorming Mockups
 
