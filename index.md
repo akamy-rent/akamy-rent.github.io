@@ -75,14 +75,14 @@ AkaMy-Rent hopes to provide a framework that allows rental agreements to be: mor
   - income from rentals per month
 - Homeowner smart contract creation
 
-### Application Component definition, used as a guide to create application creation
+#### Application Component definition, used as a guide to create application creation
 <img src="./docs/concept/component-definition.png">
 
 #### Smart Contract Implementation
 
 <img src="./docs/concept/smart-contract-implementation.png">
 
-### Beyond the Basics
+#### Beyond the Basics
 
 - Smart contracts are immutable programs that can be used by the Ethereum blockchain. They cannot be changed once they are deployed therefore it is a sound commitment by both parties. 
 - Solidity: Language that smart contracts will be written in
