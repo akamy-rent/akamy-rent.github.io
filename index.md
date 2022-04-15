@@ -110,6 +110,10 @@ AkaMy-Rent hopes to provide a framework that allows rental agreements to be: mor
 
 ### Meteor Mockups
 
+#### Messenger
+The messenger component allows users on the same contract to communicate with one another. 
+
+![messenger](./docs/mockups/20220414_messenger_mockup.gif)
 
 ## Milestone 2
 - [M2 project board](https://github.com/akamy-rent/akamy-rent/projects/2)
