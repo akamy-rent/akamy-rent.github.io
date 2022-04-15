@@ -109,6 +109,22 @@ AkaMy-Rent hopes to provide a framework that allows rental agreements to be: mor
 - [Deployment to digital Ocean](161.35.148.180)
 
 ### Meteor Mockups
+#### Landing Page
+The landing page of the app shows the main benefits of using smart contracts. 
+
+![landing](./docs/mockups/20220414_landing.png)
+
+#### Dashboard
+
+After signing in, the user is redirected to their dashboard. The dashboard provides an overview of all current contracts and some KPIs.
+
+![dashboard](./docs/mockups/20220414_dashboard.png)
+
+#### Profile Page
+
+Users can view and edit their profile using profile management pages. Shown below is the edit page.
+
+![profile-edit](./docs/mockups/20220414_edit-profile.png)
 
 #### Smart Contracts
 The following sequence shows the form for creating smart contracts. 
