@@ -32,7 +32,7 @@ Finding housing during University can be stressful for students. Homeowners are 
 ### The Solution
 AkaMy-Rent hopes to provide a framework that allows rental agreements to be: more accessible, easier to make, and provide a greater level of assurance for both homeowners and renters. Renters can benefit by having an assured rental cost that won't go up so long as their contract is valid. Homeowners can benefit by using the automated features of a smart contract and the Ethereum blockchain to ensure that rent comes in on time and can be fully paid.
 
-## Initial Brainstorm
+# Initial Brainstorm
 
 
 ### System Components and Features
@@ -104,16 +104,21 @@ AkaMy-Rent hopes to provide a framework that allows rental agreements to be: mor
     - Has a GUI for ease of use
   - May possibly create an assortment of dummy accounts with metamask and utilize Ethereum test networks that are available. 
 
-## Milestone 1
+# Milestone 1
 - [M1 project board](https://github.com/akamy-rent/akamy-rent/projects/1)
 - [Deployment to digital Ocean](161.35.148.180)
 
 ### Meteor Mockups
+
+#### Smart Contracts
+The following sequence shows the form for creating smart contracts. 
+
+![create-contracts](./docs/mockups/20220414_contract-create_mockup.gif)
 
 #### Messenger
 The messenger component allows users on the same contract to communicate with one another. 
 
 ![messenger](./docs/mockups/20220414_messenger_mockup.gif)
 
-## Milestone 2
+# Milestone 2
 - [M2 project board](https://github.com/akamy-rent/akamy-rent/projects/2)
