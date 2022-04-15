@@ -106,7 +106,7 @@ AkaMy-Rent hopes to provide a framework that allows rental agreements to be: mor
 
 # Milestone 1
 - [M1 project board](https://github.com/akamy-rent/akamy-rent/projects/1)
-- [Deployment to digital Ocean](161.35.148.180)
+- [Deployment to digital Ocean](http://161.35.148.180)
 
 ### Meteor Mockups
 #### Landing Page
