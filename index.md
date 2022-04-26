@@ -210,7 +210,7 @@ Server started http://206.189.2.161:9000
 
 - Once your Ganache server IP and port have been set. Click the key icon to manually copy and paste `ACCOUNT ADDRESS` and `PRIVATE KEY` to however you store it
   - In M2 the testing page utilizes a contract object to a single homeowner and a single tenant. This object can be found in `/app/imports/api/solc/connect2compiler.js`
-  - M3 should be communicating directly with the users and smart contract collection.
+  - M3 should be communicating directly with the users and smart contract collections.
 
 ![key-pairs](./docs/smartContractTesting/AccountInfo.png)
 
