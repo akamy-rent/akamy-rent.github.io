@@ -155,16 +155,16 @@ As of M2 we currently do not have a workaround for the bug below other than open
 ![xcors](./docs/smartContractTesting/XCORS.png)
 
 In AkaMy-Rents's current state you must initialize an insecure version of Chrome:
-`open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
+`open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`.
 
 #### Stage 1 complete: Application started
 ![stage-1](./docs/smartContractTesting/startApp.jpg)
 
 #### Initialize the Python Server
-- In another terminal window run : `ssh root@206.189.2.161` 
-- Use the password is `pythonS3rver`
-- Run the python server script `python3 /home/akamy-rent/py-compile-server/test_server.py`
-- You should then see `Server started http://206.189.2.161:9000` signaling that your server is ready to receive input
+- In another terminal window run : `ssh root@206.189.2.161` .
+- Use the password is `pythonS3rver`.
+- Run the python server script `python3 /home/akamy-rent/py-compile-server/test_server.py`.
+- You should then see `Server started http://206.189.2.161:9000` signaling that your server is ready to receive input.
 
 ##### Example of the server running
 
@@ -202,14 +202,14 @@ Server started http://206.189.2.161:9000
 
 ![ganache-start](./docs/smartContractTesting/GanacheStart.png)
 
-- There will be a menu filled with 10 accounts that are usable. Near the top there's a series of labels, make sure `RPC SERVER` is set to `HTTP://127.0.0.1:8545`
+- There will be a menu filled with 10 accounts that are usable. Near the top there's a series of labels, make sure `RPC SERVER` is set to `HTTP://127.0.0.1:8545`.
   - If it's not set to that select the `gear icon near the top right corner` to change it.
   - Select `Server` in the navigation bar and make from there you can set it to the appropriate IP and port.
 
 ![accounts](./docs/smartContractTesting/GanacheAccounts.png)
 
-- Once your Ganache server IP and port have been set. Click the key icon to manually copy and paste `ACCOUNT ADDRESS` and `PRIVATE KEY` to however you store it
-  - In M2 the testing page utilizes a contract object to a single homeowner and a single tenant. This object can be found in `/app/imports/api/solc/connect2compiler.js`
+- Once your Ganache server IP and port have been set. Click the key icon to manually copy and paste `ACCOUNT ADDRESS` and `PRIVATE KEY` to wherever key data is stored.
+  - In M2 the testing page utilizes a contract object to a single homeowner and a single tenant. This object can be found in `/app/imports/api/solc/connect2compiler.js`.
   - M3 should be communicating directly with the users and smart contract collections.
 
 ![key-pairs](./docs/smartContractTesting/AccountInfo.png)
@@ -219,11 +219,14 @@ Server started http://206.189.2.161:9000
 
 #### Navigating to the test contract page
 Now that all systems are set up, accounts are initialized the test server. Use the 4 buttons to test the smart contract.
-Use the buttons from left to right
-- Compile smart contract
-- Deploy it to Ganache
-- Use the smart contract timer function
-- Check transaction logs
+
+![test-page](./docs/smartContractTesting/testContractPage.png)
+
+Use the buttons from left to right.
+- Compile smart contract.
+- Deploy it to Ganache.
+- Use the smart contract timer function.
+- Check transaction logs.
   - Currently can only view it in console, will implement later on.
 
 #### Stage 4 completed: Test page can be used
