@@ -2,6 +2,8 @@
    th, td { text-align: right; }
 </style>
 
+![ci-badge](https://github.com/akamy-rent/akamy-rent/workflows/akamy-rent/badge.svg)
+
 ## AkaMy-Rent project pages
 - [AkaMy-Rent organization page repository](https://github.com/akamy-rent/akamy-rent.github.io)
 - [AkaMy-Rent project repository](https://github.com/akamy-rent/akamy-rent)
@@ -101,6 +103,7 @@ Finding housing during University can be stressful for students. Homeowners are 
   - May possibly create an assortment of dummy accounts with metamask and utilize Ethereum test networks that are available. 
 
 <h1 id='M-1'>Milestone 1</h1>
+
 - [M1 project board](https://github.com/akamy-rent/akamy-rent/projects/1)
 - [Deployment to digital Ocean](http://161.35.148.180)
 
@@ -133,6 +136,7 @@ The messenger component allows users on the same contract to communicate with on
 ![messenger](./docs/mockups/20220414_messenger_mockup.gif)
 
 <h1 id='M-2'>Milestone 2</h1>
+
 - [M2 project board](https://github.com/akamy-rent/akamy-rent/projects/2)
 
 ## User guide
@@ -161,6 +165,7 @@ In AkaMy-Rents's current state you must initialize an insecure version of Chrome
 - Use the password is `pythonS3rver`
 - Run the python server script `python3 /home/akamy-rent/py-compile-server/test_server.py`
 - You should then see `Server started http://206.189.2.161:9000` signaling that your server is ready to receive input
+
 ##### Example of the server running
 
 ```
@@ -198,10 +203,13 @@ Server started http://206.189.2.161:9000
 - There will be a menu filled with 10 accounts that are usable. Near the top there's a series of labels, make sure RPC SERVER is set to `HTTP://127.0.0.1:8545`
   - If it's not set to that select the gear icon near the top right corner to change it.
   - Select `Server` in the navigation bar and make from there you can set it to the appropriate IP and port.
+
 ![accounts](./docs/smartContractTesting/GanacheAccounts.png)
+
 - Once your Ganache server IP and port have been set. Click the key icon to manually copy and paste `ACCOUNT ADDRESS` and `PRIVATE KEY` to however you store it
   - In M2 the testing page utilizes a contract object to a single homeowner and a single tenant. This object can be found in `/app/imports/api/solc/connect2compiler.js`
   - M3 should be communicating directly with the connections
+
 ![key-pairs](./docs/smartContractTesting/AccountInfo.png)
 
 #### Stage 3: Key information copied to application
@@ -215,5 +223,6 @@ Use the buttons from left to right
 - Use the smart contract timer function
 - Check transaction logs
   - Currently can only view it in console, will implement later on.
+
 #### Stage 4 completed: Test page can be used
 ![stage-4](./docs/smartContractTesting/contractProcess.jpg)
