@@ -199,7 +199,9 @@ Server started http://206.189.2.161:9000
 
 #### Initialize Ganache and gather account information for testing
 - Open up Ganache and select the `Quickstart` option
+
 ![ganache-start](./docs/smartContractTesting/GanacheStart.png)
+
 - There will be a menu filled with 10 accounts that are usable. Near the top there's a series of labels, make sure RPC SERVER is set to `HTTP://127.0.0.1:8545`
   - If it's not set to that select the gear icon near the top right corner to change it.
   - Select `Server` in the navigation bar and make from there you can set it to the appropriate IP and port.
