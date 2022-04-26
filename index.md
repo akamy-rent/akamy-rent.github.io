@@ -144,7 +144,7 @@ The messenger component allows users on the same contract to communicate with on
 ## Developer Section
 - [Smart contract testing](#smart-contract-development)
 
-<h1 id='smart-contract-development'>Smart Contract Development</h1>
+<h3 id='smart-contract-development'>Smart Contract Development</h3>
 
 This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. 
 #### Initialize app
@@ -166,7 +166,7 @@ In AkaMy-Rents's current state you must initialize an insecure version of Chrome
 - Run the python server script `python3 /home/akamy-rent/py-compile-server/test_server.py`.
 - You should then see `Server started http://206.189.2.161:9000` signaling that your server is ready to receive input.
 
-##### Example of the server running
+#### Example of the server running
 
 ```
 Hokus-MacBook-Pro:app hoku$ ssh root@206.189.2.161
