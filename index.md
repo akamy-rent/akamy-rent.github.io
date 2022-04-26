@@ -6,7 +6,7 @@
 
 ## AkaMy-Rent project pages
 - [AkaMy-Rent organization page repository](https://github.com/akamy-rent/akamy-rent.github.io)
-- [AkaMy-Rent project repository](https://github.com/akamy-rent/akamy-rent ![ci-badge](https://github.com/akamy-rent/akamy-rent/workflows/akamy-rent/badge.svg)
+- [AkaMy-Rent project repository](https://github.com/akamy-rent/akamy-rent)
 
 
 ### Table of Contents
