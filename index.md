@@ -25,15 +25,11 @@
 ### Team contract
 [Contract Link](https://docs.google.com/document/d/1h5UtweWjmoHZck7WArDCLBgyvddvCbIGD888rXcvB6Y/edit?usp=sharing)
 
-### The Problem
+### Overview
 
-Finding housing during University can be stressful for students. Homeowners are cautious when dealing with students as the rental agreements tend to be shorter, and having to consistently find a tenant can also be stressful.
-
-### The Solution
-AkaMy-Rent hopes to provide a framework that allows rental agreements to be: more accessible, easier to make, and provide a greater level of assurance for both homeowners and renters. Renters can benefit by having an assured rental cost that won't go up so long as their contract is valid. Homeowners can benefit by using the automated features of a smart contract and the Ethereum blockchain to ensure that rent comes in on time and can be fully paid.
+Finding housing during University can be stressful for students. Homeowners are cautious when dealing with students as the rental agreements tend to be shorter, and having to consistently find a tenant can also be stressful. AkaMy-Rent hopes to provide a framework that allows rental agreements to be: more accessible, easier to make, and provide a greater level of assurance for both homeowners and renters. Renters can benefit by having an assured rental cost that won't go up so long as their contract is secured on the blockchain. Homeowners can benefit by using the automated features of a smart contract and the Ethereum blockchain to ensure that rent comes in on time and can be fully paid.
 
 # Initial Brainstorm
-
 
 ### System Components and Features
 
@@ -104,7 +100,7 @@ AkaMy-Rent hopes to provide a framework that allows rental agreements to be: mor
     - Has a GUI for ease of use
   - May possibly create an assortment of dummy accounts with metamask and utilize Ethereum test networks that are available. 
 
-# Milestone 1
+#Milestone 1
 - [M1 project board](https://github.com/akamy-rent/akamy-rent/projects/1)
 - [Deployment to digital Ocean](http://161.35.148.180)
 
@@ -138,3 +134,87 @@ The messenger component allows users on the same contract to communicate with on
 
 # Milestone 2
 - [M2 project board](https://github.com/akamy-rent/akamy-rent/projects/2)
+
+## User guide
+
+## Developer Section
+- [Smart contracct testing](#Smart-contract-testing)
+
+
+
+### Smart contract testing
+
+This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. 
+#### Initialize app
+Start the app as normal `meteor npm run start`
+#### Initialize insecure version of Chrome
+## Warning: Only use the insecure version of Chrome to run the app, using it with other websites may lead to security breaches.
+As of M2 we currently do not have a workaround for the bug below other than opening an insecure Chrome instance:
+![xcors](./docs/smartContractTesting/XCORS.png)
+
+In AkaMy-Rents's current state you must initialize an insecure version of Chrome:
+`open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
+
+#### Stage 1: Start application
+![stage-1](./docs/smartContractTesting/startApp.jpg)
+
+#### Initialize the Python Server
+- In another terminal window run : `ssh root@206.189.2.161` 
+- Use the password is `pythonS3rver`
+- Run the python server script `python3 /home/akamy-rent/py-compile-server/test_server.py`
+- You should then see `Server started http://206.189.2.161:9000` signaling that your server is ready to receive input
+##### Example of the server running
+```
+Hokus-MacBook-Pro:app hoku$ ssh root@206.189.2.161
+root@206.189.2.161's password: 
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-97-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Apr 26 00:51:38 UTC 2022
+
+  System load:  1.04               Users logged in:       0
+  Usage of /:   12.2% of 24.06GB   IPv4 address for eth0: 206.189.2.161
+  Memory usage: 27%                IPv4 address for eth0: 10.18.0.7
+  Swap usage:   0%                 IPv4 address for eth1: 10.110.0.4
+  Processes:    109
+
+0 updates can be applied immediately.
+
+
+*** System restart required ***
+Last login: Tue Apr 26 00:42:41 2022 from 76.173.228.38
+root@python-server:~# python3 /home/akamy-rent/py-compile-server/test_server.py 
+Server started http://206.189.2.161:9000
+```
+#### Stage 2: Start compile server
+![stage-2](./docs/smartContractTesting/compileServer.jpg)
+
+#### Initialize Ganache and gather account information for testing
+- Open up Ganache and select the `Quickstart` option
+- ![ganache-start](./docs/smartContractTesting/GanacheStart.png)
+- There will be a menu filled with 10 accounts that are usable. Near the top there's a series of labels, make sure RPC SERVER is set to `HTTP://127.0.0.1:8545`
+  - If it's not set to that select the gear icon near the top right corner to change it.
+  - Select `Server` in the navigation bar and make from there you can set it to the appropriate IP and port.
+- ![accounts](./docs/smartContractTesting/GanacheAccounts.png)
+- Once your Ganache server IP and port have been set. Click the key icon to manually copy and paste `ACCOUNT ADDRESS` and `PRIVATE KEY` to however you store it
+  - In M2 the testing page utilizes a contract object to a single homeowner and a single tenant. This object can be found in `/app/imports/api/solc/connect2compiler.js`
+  - M3 should be communicating directly with the connections
+- ![key-pairs](./docs/smartContractTesting/AccountInfo.png)
+
+#### Stage 3: Gather keys for use
+![stage-3](./docs/smartContractTesting/Ganache.jpg)
+
+#### Navigating to the test contract page
+Now that all systems are set up, accounts are initialized the test server. Use the 4 buttons to test the smart contract.
+Use the buttons from left to right
+- Compile smart contract
+- Deploy it to Ganache
+- Use the smart contract timer function
+- Check transaction logs
+  - Currently can only view it in console, will implement later on.
+
+#### Stage-4: 4 step process
+![stage-4](./docs/smartContractTesting/contractProcess.jpg)
