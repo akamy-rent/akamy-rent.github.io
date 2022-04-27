@@ -83,9 +83,9 @@ To modify the smart contract draft, the homeowner can select the 'Edit' page and
 ![smartContracts](./docs/M2/EditSmartContract.gif)
 
 #### Messenger
-The messenger component allows users on the same contract to communicate with one another.
+The messenger component allows users on the same contract to communicate with one another. Every time a contract gets created, a group is created with the members of the smart contract. The contract name is then used as the messenger group name. The screenshots in the gif below show the automatic screen updates during a conversation between two users.
 
-![messenger](./docs/mockups/20220414_messenger_mockup.gif)
+![messenger](./docs/M2/Messenger.gif)
 
 <h2 id='dev-guide'>Developer Guide</h2>
 
@@ -112,12 +112,14 @@ Should there be no problem, the app will run on localhost with port 3004 (http:/
 
 <h3 id='blockchain-dev-guide'>Smart Contract Development</h3>
 
-This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. 
+This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. This assumes that the reader has access to their own server to run the Python compilation server. In the following text, `PYTHON_SERVER_IP` and `PYTHON_SERVER_USER` are used to represent the IP address and user of said server.
 
 #### Initialize app
 Start the app as normal `meteor npm run start`
+
 #### Initialize insecure version of Chrome
-## Warning: Only use the insecure version of Chrome to run the app, using it with other websites may lead to security breaches.
+## Warning: Only use the insecure version of Chrome to run the AkaMy-Rent app. Using the insecure version of Chrome on other websites may lead to security breaches.
+
 As of M2 we currently do not have a workaround for the bug below other than opening an insecure Chrome instance:
 ![xcors](./docs/smartContractTesting/XCORS.png)
 
@@ -128,16 +130,16 @@ In AkaMy-Rents's current state you must initialize an insecure version of Chrome
 ![stage-1](./docs/smartContractTesting/startApp.jpg)
 
 #### Initialize the Python Server
-- In another terminal window run : `ssh root@206.189.2.161` .
-- Use the password is `pythonS3rver`.
+- In another terminal window run : `ssh PYTHON_SERVER_USER@PYTHON_SERVER_IP` .
+- Use your password to login.
 - Run the python server script `python3 /home/akamy-rent/py-compile-server/test_server.py`.
 - You should then see `Server started http://206.189.2.161:9000` signaling that your server is ready to receive input.
 
 #### Example of the server running
 
 ```
-Hokus-MacBook-Pro:app hoku$ ssh root@206.189.2.161
-root@206.189.2.161's password: 
+Hokus-MacBook-Pro:app hoku$ PYTHON_SERVER_USER@PYTHON_SERVER_IP
+PYTHON_SERVER_USER@PYTHON_SERVER_IP's password: 
 Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-97-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -158,7 +160,7 @@ Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-97-generic x86_64)
 *** System restart required ***
 Last login: Tue Apr 26 00:42:41 2022 from 76.173.228.38
 root@python-server:~# python3 /home/akamy-rent/py-compile-server/test_server.py 
-Server started http://206.189.2.161:9000
+Server started http://PYTHON_SERVER_IP:9000
 ```
 
 #### Stage 2 complete: Compile server started
