@@ -45,19 +45,25 @@ The landing page of the app shows the main benefits of using smart contracts.
 #### Profile Page
 
 Once Users create a new account, they are directly prompted to the edit profile page filled with default placeholder values.
+
 <img src="docs/profile/editprofilepage.png">
+
 Then, they can make the necessary changes to the form fields and can confirm the changes have been submitted successfully by the following alert.
+
 <img src="docs/profile/editsuccess.png">
 
 Whenever users are on different window and wanted to view their profile, they can go to the top right corner and click on the dropdown menu to select view profile.
+
 <img src="docs/profile/dropdown-myprofile.png">
+
 This will then directly take them to the view profile page. Users also have the option to navigate to different windows including the edit profile page.
+
 <img src="docs/profile/viewprofilepage.png">
 
 
 #### Dashboard
 
-After signing in, the user can view their dashboard by clicking the button in the navigation bar. The dashboard provides an overview of all current contracts and some KPKIs. At the top of the dashboard, the users can check their total active contracts, income and expenses. In the Smart Contracts filed, there is a table for users to view all of their contracts, which contain the information of house address, homeowner name, tenant name and so on. The user can choose to sign or edit for each contract. In the sign link, users can view and deploy the smart contract by choosing agreement, and only tenant of this contract can sign the form. In the edit link, users can edit the smart contract if they want to change the content of it, and only homeowner of this contract can edit the form. Last but not least, there are three buttons: create contracts, messenger and my profile which will redirect users to the exact pages.
+After signing in, the user can view their dashboard by clicking the button in the navigation bar. The dashboard provides an overview of all current contracts and some KPIs. At the top of the dashboard, the users can check their total active contracts, income and expenses. In the Smart Contracts field, there is a table for users to view all of their contracts, which contains the information of house address, homeowner name, tenant name and so on. The user can choose to sign or edit for each contract. In the sign link, users can view and deploy the smart contract by choosing agreement, and only tenant of this contract can sign the form. In the edit link, users can edit the smart contract if they want to change the content of it, and only homeowner of this contract can edit the form. Last but not least, there are three buttons: create contracts, messenger and my profile which will redirect users to the exact pages.
 
 ![dashboard](./docs/M2/Dashboard.gif)
 
