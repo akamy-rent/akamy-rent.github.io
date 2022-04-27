@@ -57,9 +57,9 @@ This will then directly take them to the view profile page. Users also have the 
 
 #### Dashboard
 
-After signing in, the user is redirected to their dashboard. The dashboard provides an overview of all current contracts and some KPIs.
+After signing in, the user can view their dashboard by clicking the button in the navigation bar. The dashboard provides an overview of all current contracts and some KPKIs. At the top of the dashboard, the users can check their total active contracts, income and expenses. In the Smart Contracts filed, there is a table for users to view all of their contracts, which contain the information of house address, homeowner name, tenant name and so on. The user can choose to sign or edit for each contract. In the sign link, users can view and deploy the smart contract by choosing agreement, and only tenant of this contract can sign the form. In the edit link, users can edit the smart contract if they want to change the content of it, and only homeowner of this contract can edit the form. Last but not least, there are three buttons: create contracts, messenger and my profile which will redirect users to the exact pages.
 
-![dashboard](./docs/mockups/20220414_dashboard.png)
+![dashboard](./docs/M2/Dashboard.gif)
 
 #### Smart Contracts
 Any user can create a smart contract and those who do so will be assumed to be the homeowner. To do so, click on the 'Create Smart Contract' tab in the navbar.
