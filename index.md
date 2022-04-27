@@ -83,9 +83,9 @@ To modify the smart contract draft, the homeowner can select the 'Edit' page and
 ![smartContracts](./docs/M2/EditSmartContract.gif)
 
 #### Messenger
-The messenger component allows users on the same contract to communicate with one another.
+The messenger component allows users on the same contract to communicate with one another. Every time a contract gets created, a group is created with the members of the smart contract. The contract name is then used as the messenger group name. The screenshots in the gif below show the automatic screen updates during a conversation between two users.
 
-![messenger](./docs/mockups/20220414_messenger_mockup.gif)
+![messenger](./docs/M2/Messenger.gif)
 
 <h2 id='dev-guide'>Developer Guide</h2>
 
