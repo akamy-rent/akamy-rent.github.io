@@ -68,9 +68,26 @@ The messenger component allows users on the same contract to communicate with on
 
 <h3 id='meteor-dev-guide'>Meteor Guide</h3>
 
-<h3 id='blockchain-dev-guide'>Smart Contracts / Blockchain guide</h3>
+First, [install Meteor](https://www.meteor.com/install).
 
-<h3 id='smart-contract-development'>Smart Contract Development</h3>
+Second, request access from the author and clone the [akamy-repo](https://github.com/akamy-rent/akamy-rent).
+
+Third, install libraries from within the `/app` directory
+
+```
+$ meteor npm install
+```
+
+And start the app
+
+```
+$ meteor npm run start
+```
+
+Should there be no problem, the app will run on localhost with port 3004 (http://localhost:3004), or whichever port you specify in the [package.json start script command](https://github.com/akamy-rent/akamy-rent/blob/c506b1976d906f0c54c8aa907a37aa876906755f/app/package.json#L42).
+
+
+<h3 id='blockchain-dev-guide'>Smart Contract Development</h3>
 
 This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. 
 
