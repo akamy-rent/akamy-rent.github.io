@@ -55,8 +55,6 @@ This will then directly take them to the view profile page. Users also have the 
 <img src="docs/profile/viewprofilepage.png">
 
 
-![profile-edit](./docs/mockups/20220414_edit-profile.png)
-
 #### Dashboard
 
 After signing in, the user is redirected to their dashboard. The dashboard provides an overview of all current contracts and some KPIs.
