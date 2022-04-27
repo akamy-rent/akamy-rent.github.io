@@ -133,7 +133,7 @@ In AkaMy-Rents's current state you must initialize an insecure version of Chrome
 - In another terminal window run : `ssh PYTHON_SERVER_USER@PYTHON_SERVER_IP` .
 - Use your password to login.
 - Run the python server script `python3 /home/akamy-rent/py-compile-server/test_server.py`.
-- You should then see `Server started http://206.189.2.161:9000` signaling that your server is ready to receive input.
+- You should then see `Server started http://PYTHON_SERVER_IP:9000` signaling that your server is ready to receive input.
 
 #### Example of the server running
 
@@ -149,7 +149,7 @@ Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-97-generic x86_64)
   System information as of Tue Apr 26 00:51:38 UTC 2022
 
   System load:  1.04               Users logged in:       0
-  Usage of /:   12.2% of 24.06GB   IPv4 address for eth0: 206.189.2.161
+  Usage of /:   12.2% of 24.06GB   IPv4 address for eth0: PYTHON_SERVER_IP
   Memory usage: 27%                IPv4 address for eth0: 10.18.0.7
   Swap usage:   0%                 IPv4 address for eth1: 10.110.0.4
   Processes:    109
