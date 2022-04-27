@@ -45,13 +45,19 @@ The landing page of the app shows the main benefits of using smart contracts.
 #### Profile Page
 
 Once Users create a new account, they are directly prompted to the edit profile page filled with default placeholder values.
+
 <img src="docs/profile/editprofilepage.png">
+
 Then, they can make the necessary changes to the form fields and can confirm the changes have been submitted successfully by the following alert.
+
 <img src="docs/profile/editsuccess.png">
 
 Whenever users are on different window and wanted to view their profile, they can go to the top right corner and click on the dropdown menu to select view profile.
+
 <img src="docs/profile/dropdown-myprofile.png">
+
 This will then directly take them to the view profile page. Users also have the option to navigate to different windows including the edit profile page.
+
 <img src="docs/profile/viewprofilepage.png">
 
 
