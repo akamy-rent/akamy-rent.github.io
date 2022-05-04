@@ -10,22 +10,15 @@ This page describes our progress by Milestone 3.
 ### User Guide
 
 #### Landing Page
-The landing page of the app shows the main benefits of using smart contracts.
+The landing page of the app shows the main benefits of using smart contracts. The user can sign up a new account or login in a exited accouunt. After logging in the account, the navigation bar in the landing page will show three options: Dashboard, Add Smart Contract, and Messenger which provide users with a quick start of the website main fucntions.
 
 ![landing](./docs/M3/landing.gif)
 
 #### Profile Page
 
-Once Users create a new account, they are directly prompted to the edit profile page filled with default placeholder values.
-
-Then, they can make the necessary changes to the form fields and can confirm the changes have been submitted successfully by the following alert.
-
-Whenever users are on different window and wanted to view their profile, they can go to the top right corner and click on the dropdown menu to select view profile.
-
-This will then directly take them to the view profile page. Users also have the option to navigate to different windows including the edit profile page.
+Once Users create a new account, they are directly prompted to the edit profile page filled with default placeholder values. Whenever users are on different window and wanted to view their profile, they can go to the top right corner and click on the dropdown menu to select view profile. Then, they can make the necessary changes to the form fields and can confirm the changes have been submitted successfully by the alert.
 
 ![profile](./docs/M3/profile.gif)
-
 
 #### Dashboard
 
