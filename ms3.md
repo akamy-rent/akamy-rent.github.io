@@ -37,14 +37,11 @@ The user will be taken to the 'Create Smart Contract page', which contains a for
 
 ![smartContracts](./docs/M3/homeSC_1.gif)
 
-By clicking the 'Edit' button on the dashboard for the respective smart contract, the homeowner can edit the smart contract if they want to make any changes. After confirming the contract information in correct, homeowner can click the 'Sign' button to sign the smart contract. They will have to enter full name to sign. After signing the contract, their name will be displayed in the **Homeowner Signature** filed.
+To modify the smart contract draft, the homeowner can select the 'Edit' page and make the necessary revisions. When completed, the homeowner can save their new updates for the tenant to view again. After confirming the contract information in correct, homeowner can click the 'Sign' button to sign the smart contract. They will have to enter full name to sign. After signing the contract, their name will be displayed in the **Homeowner Signature** filed.
 
 ![smartContracts](./docs/M3/homeSC_2.gif)
 
 The tenant will be able to view this smart contract from their account dashboard if their user correct account email is inputted into the 'Tenant email' field. The tenant can view the smart contract draft and declare their stance on the proposed smart contract by selecting 'Agreement' or 'Unsigned'. After selecting their stance and pressing save, the homeowner will be able to see the tenant stance. If the tenant agrees, they can go on to fill out the signature field. Once taking a signature, this field disappears. If the tenant disagrees with the proposed smart contract, they can reach out to the homeowner about their concerns through the 'Messenger' feature. Only the tenant can fill out these fields.
-
-To modify the smart contract draft, the homeowner can select the 'Edit' page and make the necessary revisions. When completed, the homeowner can save their new updates for the tenant to view again. In the sign link, tenant can view and deploy the smart contract by choosing agreement, and only tenant of this contract can sign the form. In the edit link, users can edit the smart contract if they want to change the content of it, and only homeowner of this contract can edit the form.
-
 
 ![smartContracts](./docs/M3/tenantSC.gif)
 
@@ -52,5 +49,6 @@ To modify the smart contract draft, the homeowner can select the 'Edit' page and
 The messenger component allows users on the same contract to communicate with one another. Every time a contract gets created, a group is created with the members of the smart contract. The contract name is then used as the messenger group name. The screenshots in the gif below show the automatic screen updates during a conversation between two users.
 
 ![messenger](./docs/M3/tenantSM.gif)
+
 
 ![messenger](./docs/M3/homeSM.gif)
