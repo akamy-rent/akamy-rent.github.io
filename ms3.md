@@ -10,7 +10,7 @@ This page describes our progress by Milestone 3.
 ### User Guide
 
 #### Landing Page
-The landing page of the app shows the main benefits of using smart contracts. The user can sign up a new account or login in a exited accouunt. After logging in the account, the navigation bar in the landing page will show three options: Dashboard, Add Smart Contract, and Messenger which provide users with a quick start of the website main fucntions.
+The landing page of the app shows the main benefits of using smart contracts. The user can sign up a new account or login in a existed accouunt. After logging in the account, the navigation bar in the landing page will show three options: Dashboard, Add Smart Contract, and Messenger which provide users with a quick start of the website main fucntions.
 
 ![landing](./docs/M3/landing.gif)
 
