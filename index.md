@@ -238,6 +238,7 @@ Now all systems are set up and accounts are initialized the test server. You may
 #### There's no message indicating we are not on a blockchain.
 ![deployyes](./docs/smartContractTesting/deployyes.png)
 #### The contract information is sent to the compiler server, which returns the abi and bytecode.
+
 ```
 root@python-server:/home/akamy-rent/py-compile-server# python3 test_server.py 
 Server started http://206.189.2.161:9000
