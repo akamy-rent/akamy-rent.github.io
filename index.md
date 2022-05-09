@@ -232,12 +232,11 @@ Now all systems are set up and accounts are initialized the test server. You may
 ![stage-4](./docs/smartContractTesting/contractProcess.jpg)
 
 
-#### Smart contract deployment pictures
 
-#### Agreement is signed by both participants and the tenant agrees to the terms of the agreement.
+1. #### Agreement is signed by both participants and the tenant agrees to the terms of the agreement.
 #### There's no message indicating we are not on a blockchain.
 ![deployyes](./docs/smartContractTesting/deployyes.png)
-#### The contract information is sent to the compiler server, which returns the abi and bytecode.
+2. #### The contract information is sent to the compiler server, which returns the abi and bytecode.
 
 ```
 root@python-server:/home/akamy-rent/py-compile-server# python3 test_server.py 
@@ -262,14 +261,14 @@ contract Agreement{
 }
 ```
 
-#### The contract can now be deployed to the blockchain. The homeowner must give an insignificant amount of Ether to initially fund the functionality of contract(not shown)
+3. #### The contract can now be deployed to the blockchain. The homeowner must give an insignificant amount of Ether to initially fund the functionality of contract(not shown)
 ![creation](./docs/smartContractTesting/creation.png)
 
-#### All contracts as of now can be called every second from deployment. Contracts are called 5 times before detonation.
+4. #### All contracts as of now can be called every second from deployment. Contracts are called 5 times before detonation.
 ##### There is code to use longer time periods, but it's impossible to test those without some kind of software based time manipulation.
 ![5calls](./docs/smartContractTesting/5calls.png)
 
-#### Contracts are destroyed which pays the owner. Contract destruction payments encourages Ethereum users to free-up resources of the network.
+5. #### Contracts are destroyed which pays the owner. Contract destruction payments encourages Ethereum users to free-up resources of the network.
 ![destroy](./docs/smartContractTesting/destroy.png)
 
 
