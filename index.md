@@ -61,7 +61,7 @@ Last but not least, there are three buttons: create contracts, messenger and my 
 #### Smart Contracts
 Any user can create a smart contract and those who do so will be assumed to be the homeowner. To do so, click on the 'Create Smart Contract' tab in the navbar.
 
-The user will be taken to the 'Create Smart Contract page', which contains a form and fields for the user to complete. User will notice that the **Homeowner Details** field has been filled and cannot be changed any more. This helps the homeowner create a smart contract in a fast and accurate way. When all fields are completed, pressing the 'save' button will save the data and create a new smart contract. The homeowner will find the new contract in the dashboard table which in a **Pending** status.
+The user will be taken to the 'Create Smart Contract page', which contains a form and fields for the user to complete. User will notice that the **Homeowner Details** field has been filled and cannot be changed anymore. This helps the homeowner create a smart contract in a fast and accurate way. When all fields are completed, pressing the 'save' button will save the data and create a new smart contract. The homeowner will find the new contract in the dashboard table which in a **Pending** status.
 
 ![smartContracts](./docs/M3/homeSC_1.gif)
 
@@ -72,6 +72,19 @@ To modify the smart contract draft, the homeowner can select the 'Edit' page and
 The tenant will be able to view this smart contract from their account dashboard if their user correct account email is inputted into the 'Tenant email' field. The tenant can view the smart contract draft and declare their stance on the proposed smart contract by selecting 'Agreement' or 'Unsigned'. After selecting their stance and pressing save, the homeowner will be able to see the tenant stance. If the tenant agrees, they can go on to fill out the signature field. Once taking a signature, this field disappears. If the tenant disagrees with the proposed smart contract, they can reach out to the homeowner about their concerns through the 'Messenger' feature. Only the tenant can fill out these fields.
 
 ![smartContracts](./docs/M3/tenantSC.gif)
+
+
+Smart Contracts are deployed once the system recognizes that:
+1. That the tenant has agreed to the terms and conditions
+2. The homeowner and tenant have both signed
+
+This changes the status of the contract to `Active` meaning that the contract is now deployed. The `Pending` status indicates that there are missing signatures for the current agreement. 
+
+## picture of non-deployed  contract
+
+As of now there is no way to connect the deployed version of the application to an actual blockchain nor a test blockchain. If you wish to use a test blockchain with Ganache or another private network you can skip to [Blockchain development guide](#blockchain-dev-guide). 
+
+
 
 #### Messenger
 The messenger component allows users on the same contract to communicate with one another. Every time a contract gets created, a group is created with the members of the smart contract. The contract name is then used as the messenger group name. The screenshots in the gif below show the automatic screen updates during a conversation between two users.
@@ -107,19 +120,22 @@ Should there be no problem, the app will run on localhost with port 3004 (http:/
 
 <h3 id='blockchain-dev-guide'>Smart Contract Development</h3>
 
-This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. This assumes that the reader has access to their own server to run the Python compilation server. In the following text, `PYTHON_SERVER_IP` and `PYTHON_SERVER_USER` are used to represent the IP address and user of said server.
+This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. This assumes that the reader has access to their own server to run the Python compilation server. In the following text, `PYTHON_SERVER_IP` and `PYTHON_SERVER_USER` are used to represent the IP address and user of said server. 
+- Developers can change the code of the python server in `/app/py-compile-server/test_server.py`
 
-#### Initialize app
-Start the app as normal `meteor npm run start`
+<h4 id='initialize'>Initialize the app</h4>
+Start the app with the port number reserved for the Ganache test network `GANACHE_URL=http://localhost:PORTNUMBER meteor npm start`
+- Here's an example with the port being reserved for 8545 `GANACHE_URL=http://localhost:8545 meteor npm start`
+  
+#### Initialize chrome
 
-#### Initialize insecure version of Chrome
 ## Warning: Only use the insecure version of Chrome to run the AkaMy-Rent app. Using the insecure version of Chrome on other websites may lead to security breaches.
+`open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
 
-As of M2 we currently do not have a workaround for the bug below other than opening an insecure Chrome instance:
+For blockchain interaction and use of the python compile server, developers must use an insecure chrome instance.
+We currently do not have a workaround for the bug below other than opening an insecure Chrome instance, this is due to the fact that Google Chrome doesn't allow APIs to interact with other websites or addresses.
+
 ![xcors](./docs/smartContractTesting/XCORS.png)
-
-In AkaMy-Rents's current state you must initialize an insecure version of Chrome:
-`open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`.
 
 #### Stage 1 complete: Application started
 ![stage-1](./docs/smartContractTesting/startApp.jpg)
@@ -158,9 +174,11 @@ root@python-server:~# python3 /home/akamy-rent/py-compile-server/test_server.py
 Server started http://PYTHON_SERVER_IP:9000
 ```
 
-#### Stage 2 complete: Compile server started
-![stage-2](./docs/smartContractTesting/compileServer.jpg)
+#### Stage 2 complete: Compile server started 
+![stage-2]()
 
+
+### In order to use Ganache you must have enabled the correct port in [the initialization of the app](#initialize)
 #### Initialize Ganache and gather account information for testing
 - Open up Ganache and select the `Quickstart` option
 
@@ -173,25 +191,18 @@ Server started http://PYTHON_SERVER_IP:9000
 ![accounts](./docs/smartContractTesting/GanacheAccounts.png)
 
 - Once your Ganache server IP and port have been set. Click the key icon to manually copy and paste `ACCOUNT ADDRESS` and `PRIVATE KEY` to wherever key data is stored.
-  - In M2 the testing page utilizes a contract object to a single homeowner and a single tenant. This object can be found in `/app/imports/api/solc/connect2compiler.js`.
-  - M3 should be communicating directly with the users and smart contract collections.
 
 ![key-pairs](./docs/smartContractTesting/AccountInfo.png)
+
+- Developers have the option to alter default user data in `/app/settings.development.json` or they can add an account with `ACCOUNT ADDRESS` in the `Wallet address `field and the `Private Key` field.
 
 #### Stage 3: Key information copied to application
 ![stage-3](./docs/smartContractTesting/Ganache.jpg)
 
-#### Navigating to the test contract page
-Now that all systems are set up, accounts are initialized the test server. Use the 4 buttons to test the smart contract.
+#### Utilizing the new functionality of deploying smart contracts
+Now all systems are set up and accounts are initialized the test server. You may now try the sign to deploy feature that's built into the smart contract signing process. Once the tenant has agreed to the terms and conditions along with both participants signing the contract you can deploy the smart contract to the test network
 
-![test-page](./docs/smartContractTesting/testContractPage.png)
-
-Use the buttons from left to right.
-- Compile smart contract.
-- Deploy it to Ganache.
-- Use the smart contract timer function.
-- Check transaction logs.
-  - Currently can only view it in console, will implement later on.
+## picture of deployed test network
 
 #### Stage 4 completed: Test page can be used
-![stage-4](./docs/smartContractTesting/contractProcess.jpg)
+![stage-4]()
