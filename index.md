@@ -201,7 +201,7 @@ Server started http://PYTHON_SERVER_IP:9000
 ```
 
 #### Stage 2 complete: Compile server started 
-![stage-2](./docs/smartContractTesting/compileServer.png)
+![stage-2](./docs/smartContractTesting/compileServer.jpg)
 
 
 ### In order to use Ganache you must have enabled the correct port in [the initialization of the app](#initialize)
