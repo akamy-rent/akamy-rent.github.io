@@ -9,6 +9,7 @@
 - [Homepage (this page)](./index.md)
   - [Project Links](#project-links)
   - [Project Overview](#project-overview)
+  - [Community Feedback](#feedback)
   - [User Guide](#user-guide)
   - [Developer Guide](#dev-guide)
 - [Project Team](./team.md)
@@ -95,6 +96,31 @@ The messenger component allows users on the same contract to communicate with on
 ![messenger](./docs/M3/homeSM.gif)
 
 
+<h2 id='feedback'>Community Feedback/h2>
+
+### "Ethereum? What's an Ethereum?"
+The bottom line is that Ethereum just isn't that popular right now. When told about the "above and beyond" portion of our project most people didn't care that it was Ethereum. Community members focused on how easy it was to create rental agreements and that the site was very straight forward. But for one community member who was familiar with the technology, the concept of who pays the **gas fee** for each transaction came up.  
+
+### "So what happens now?"
+In our initial testing many users found the landing page didn't guide them into using the application. We decided that adding a few buttons to the landing page would be helpful. Users also thought it would be helpful to have the `create profile` and `edit profile` pages lead back to different pages. At this moment we haven't figured out the redirect for the `edit profile` to the `view profile` page. But after sign up users are prompted to the dashboard where they can view their profiles. Overall they found navigation of the site to be pretty obvious and contract creation to be straight forward.
+
+![newlanding](./docs/M3/newlanding.png)
+
+### Homeowner focused
+Although we had set out to create an app that was for **students** we quickly found out that this application was definitely homeowner focused. Users got excited seeing their **Income** value go up, but (as expected) they weren't as excited when about their **Payment** value on the dashboard. Some community members mentioned that this application heavily relies on homeowners being able to enter the correct information and understanding how to use the platform, which can be worrisome when homeowners have that much power.
+
+### Insights on the future
+
+Community members discovered that this could not only be used for residential properties, but it could also be used as way to manger commercial properties as well.
+
+Community members wanted the ability to create flexible lease dates, and a way to negotiate apart from the messenger application. For example, one community member suggested the use of a "rejection and explanation text field" on the signature page.
+
+Community members wanted the messenger to alert them when they have messengers, but overall they were happy with the ability to directly message their landlords and  landlords found it useful message their tenants. They also wanted the messenger to have a calendar system so that way the homeowner can schedule various things on appointments with it. With the emphasis on homeowners we could have this as a property management application as well(which it already has).
+
+Our initial brainstorming idea had ways to cater to subletting, multiple tenants with different pay periods, as well as having the system use profile information to create the smart contract rather than entering it manually. But that functionality was beyond our timeline.
+
+There are also smart contract security concerns, but that is beyond the scope of this project.
+
 <h2 id='dev-guide'>Developer Guide</h2>
 
 <h3 id='meteor-dev-guide'>Meteor Guide</h3>
@@ -175,7 +201,7 @@ Server started http://PYTHON_SERVER_IP:9000
 ```
 
 #### Stage 2 complete: Compile server started 
-![stage-2]()
+![stage-2](./docs/smartContractTesting/compileServer.png)
 
 
 ### In order to use Ganache you must have enabled the correct port in [the initialization of the app](#initialize)
@@ -202,7 +228,47 @@ Server started http://PYTHON_SERVER_IP:9000
 #### Utilizing the new functionality of deploying smart contracts
 Now all systems are set up and accounts are initialized the test server. You may now try the sign to deploy feature that's built into the smart contract signing process. Once the tenant has agreed to the terms and conditions along with both participants signing the contract you can deploy the smart contract to the test network
 
-## picture of deployed test network
-
 #### Stage 4 completed: Test page can be used
-![stage-4]()
+![stage-4](./docs/smartContractTesting/contractProcess.jpg)
+
+
+#### Smart contract deployment pictures
+
+#### Agreement is signed by both participants and the tenant agrees to the terms of the agreement.
+#### There's no message indicating we are not on a blockchain.
+![deployyes](./docs/smartContractTesting/deployyes.png)
+#### The contract information is sent to the compiler server, which returns the abi and bytecode.
+```
+root@python-server:/home/akamy-rent/py-compile-server# python3 test_server.py 
+Server started http://206.189.2.161:9000
+76.173.228.38 - - [09/May/2022 07:41:27] "POST / HTTP/1.1" 200 -
+// SPDX-License-Identifier: MIT
+pragma solidity >0.8.4;
+contract Agreement{
+
+    address private homeowner = 0x7F91BD1e787121ADf7b75A7FF4eE0944Fa021B16;
+
+    function payRent(address payable _hOwner) external payable{
+        _hOwner.transfer(msg.value);
+    }
+
+    function close() external {
+        selfdestruct(payable(homeowner));
+    }
+    
+
+    fallback() external payable{}
+}
+```
+
+#### The contract can now be deployed to the blockchain. The homeowner must give an insignificant amount of Ether to initially fund the functionality of contract(not shown)
+![creation](./docs/smartContractTesting/creation.png)
+
+#### All contracts as of now can be called every second from deployment. Contracts are called 5 times before detonation.
+##### There is code to use longer time periods, but it's impossible to test those without some kind of software based time manipulation.
+![5calls](./docs/smartContractTesting/5calls.png)
+
+#### Contracts are destroyed which pays the owner. Contract destruction payments encourages Ethereum users to free-up resources of the network.
+![destroy](./docs/smartContractTesting/destroy.png)
+
+
