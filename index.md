@@ -81,7 +81,7 @@ Smart Contracts are deployed once the system recognizes that:
 
 This changes the status of the contract to `Active` meaning that the contract is now deployed. The `Pending` status indicates that there are missing signatures for the current agreement. 
 
-## picture of non-deployed  contract
+![stage-1](./docs/smartContractTesting/deployno.png)
 
 As of now there is no way to connect the deployed version of the application to an actual blockchain nor a test blockchain. If you wish to use a test blockchain with Ganache or another private network you can skip to [Blockchain development guide](#blockchain-dev-guide). 
 
