@@ -96,7 +96,7 @@ The messenger component allows users on the same contract to communicate with on
 ![messenger](./docs/M3/homeSM.gif)
 
 
-<h2 id='feedback'>Community Feedback/h2>
+<h2 id='feedback'>Community Feedback</h2>
 
 ### "Ethereum? What's an Ethereum?"
 The bottom line is that Ethereum just isn't that popular right now. When told about the "above and beyond" portion of our project most people didn't care that it was Ethereum. Community members focused on how easy it was to create rental agreements and that the site was very straight forward. But for one community member who was familiar with the technology, the concept of who pays the **gas fee** for each transaction came up.  
