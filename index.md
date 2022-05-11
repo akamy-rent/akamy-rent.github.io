@@ -228,7 +228,7 @@ Server started http://PYTHON_SERVER_IP:9000
 #### Utilizing the new functionality of deploying smart contracts
 Now all systems are set up and accounts are initialized the test server. You may now try the sign to deploy feature that's built into the smart contract signing process. Once the tenant has agreed to the terms and conditions along with both participants signing the contract you can deploy the smart contract to the test network
 
-#### Stage 4 completed: Test page can be used
+#### Stage 4 completed: Smart contracts can be deployed
 ![stage-4](./docs/smartContractTesting/contractProcess.jpg)
 
 ### Smart contract process steps
