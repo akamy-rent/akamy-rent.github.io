@@ -9,6 +9,7 @@
 - [Homepage (this page)](./index.md)
   - [Project Links](#project-links)
   - [Project Overview](#project-overview)
+  - [Community Feedback](#feedback)
   - [User Guide](#user-guide)
   - [Developer Guide](#dev-guide)
 - [Project Team](./team.md)
@@ -61,7 +62,7 @@ Last but not least, there are three buttons: create contracts, messenger and my 
 #### Smart Contracts
 Any user can create a smart contract and those who do so will be assumed to be the homeowner. To do so, click on the 'Create Smart Contract' tab in the navbar.
 
-The user will be taken to the 'Create Smart Contract page', which contains a form and fields for the user to complete. User will notice that the **Homeowner Details** field has been filled and cannot be changed any more. This helps the homeowner create a smart contract in a fast and accurate way. When all fields are completed, pressing the 'save' button will save the data and create a new smart contract. The homeowner will find the new contract in the dashboard table which in a **Pending** status.
+The user will be taken to the 'Create Smart Contract page', which contains a form and fields for the user to complete. User will notice that the **Homeowner Details** field has been filled and cannot be changed anymore. This helps the homeowner create a smart contract in a fast and accurate way. When all fields are completed, pressing the 'save' button will save the data and create a new smart contract. The homeowner will find the new contract in the dashboard table which in a **Pending** status.
 
 ![smartContracts](./docs/M3/homeSC_1.gif)
 
@@ -73,6 +74,19 @@ The tenant will be able to view this smart contract from their account dashboard
 
 ![smartContracts](./docs/M3/tenantSC.gif)
 
+
+Smart Contracts are deployed once the system recognizes that:
+1. That the tenant has agreed to the terms and conditions
+2. The homeowner and tenant have both signed
+
+This changes the status of the contract to `Active` meaning that the contract is now deployed. The `Pending` status indicates that there are missing signatures for the current agreement. 
+
+![stage-1](./docs/smartContractTesting/deployno.png)
+
+As of now there is no way to connect the deployed version of the application to an actual blockchain nor a test blockchain. If you wish to use a test blockchain with Ganache or another private network you can skip to [Blockchain development guide](#blockchain-dev-guide). 
+
+
+
 #### Messenger
 The messenger component allows users on the same contract to communicate with one another. Every time a contract gets created, a group is created with the members of the smart contract. The contract name is then used as the messenger group name. The screenshots in the gif below show the automatic screen updates during a conversation between two users.
 
@@ -81,6 +95,31 @@ The messenger component allows users on the same contract to communicate with on
 
 ![messenger](./docs/M3/homeSM.gif)
 
+
+<h2 id='feedback'>Community Feedback</h2>
+
+### "Ethereum? What's an Ethereum?"
+The bottom line is that Ethereum just isn't that popular right now. When told about the "above and beyond" portion of our project most people didn't care that it was Ethereum. Community members focused on how easy it was to create rental agreements and that the site was very straight forward. But for one community member who was familiar with the technology, the concept of who pays the **gas fee** for each transaction came up.  
+
+### "So what happens now?"
+In our initial testing many users found the landing page didn't guide them into using the application. We decided that adding a few buttons to the landing page would be helpful. Users also thought it would be helpful to have the `create profile` and `edit profile` pages lead back to different pages. At this moment we haven't figured out the redirect for the `edit profile` to the `view profile` page. But after sign up users are prompted to the dashboard where they can view their profiles. Overall they found navigation of the site to be pretty obvious and contract creation to be straight forward.
+
+![newlanding](./docs/M3/newlanding.png)
+
+### Homeowner focused
+Although we had set out to create an app that was for **students** we quickly found out that this application was definitely homeowner focused. Users got excited seeing their **Income** value go up, but (as expected) they weren't as excited when about their **Payment** value on the dashboard. Some community members mentioned that this application heavily relies on homeowners being able to enter the correct information and understanding how to use the platform, which can be worrisome when homeowners have that much power.
+
+### Insights on the future
+
+Community members discovered that this could not only be used for residential properties, but it could also be used as way to manger commercial properties as well.
+
+Community members wanted the ability to create flexible lease dates, and a way to negotiate apart from the messenger application. For example, one community member suggested the use of a "rejection and explanation text field" on the signature page.
+
+Community members wanted the messenger to alert them when they have messengers, but overall they were happy with the ability to directly message their landlords and  landlords found it useful message their tenants. They also wanted the messenger to have a calendar system so that way the homeowner can schedule various things on appointments with it. With the emphasis on homeowners we could have this as a property management application as well(which it already has).
+
+Our initial brainstorming idea had ways to cater to subletting, multiple tenants with different pay periods, as well as having the system use profile information to create the smart contract rather than entering it manually. But that functionality was beyond our timeline.
+
+There are also smart contract security concerns, but that is beyond the scope of this project.
 
 <h2 id='dev-guide'>Developer Guide</h2>
 
@@ -107,19 +146,22 @@ Should there be no problem, the app will run on localhost with port 3004 (http:/
 
 <h3 id='blockchain-dev-guide'>Smart Contract Development</h3>
 
-This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. This assumes that the reader has access to their own server to run the Python compilation server. In the following text, `PYTHON_SERVER_IP` and `PYTHON_SERVER_USER` are used to represent the IP address and user of said server.
+This portion explains how to AkaMy interacts with the Python compilation server and the Ganache simulated blockchain. This assumes that the reader has access to their own server to run the Python compilation server. In the following text, `PYTHON_SERVER_IP` and `PYTHON_SERVER_USER` are used to represent the IP address and user of said server. 
+- Developers can change the code of the python server in `/app/py-compile-server/test_server.py`
 
-#### Initialize app
-Start the app as normal `meteor npm run start`
+<h4 id='initialize'>Initialize the app</h4>
+Start the app with the port number reserved for the Ganache test network `GANACHE_URL=http://localhost:PORTNUMBER meteor npm start`
+- Here's an example with the port being reserved for 8545 `GANACHE_URL=http://localhost:8545 meteor npm start`
+  
+#### Initialize chrome
 
-#### Initialize insecure version of Chrome
 ## Warning: Only use the insecure version of Chrome to run the AkaMy-Rent app. Using the insecure version of Chrome on other websites may lead to security breaches.
+`open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
 
-As of M2 we currently do not have a workaround for the bug below other than opening an insecure Chrome instance:
+For blockchain interaction and use of the python compile server, developers must use an insecure chrome instance.
+We currently do not have a workaround for the bug below other than opening an insecure Chrome instance, this is due to the fact that Google Chrome doesn't allow APIs to interact with other websites or addresses.
+
 ![xcors](./docs/smartContractTesting/XCORS.png)
-
-In AkaMy-Rents's current state you must initialize an insecure version of Chrome:
-`open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`.
 
 #### Stage 1 complete: Application started
 ![stage-1](./docs/smartContractTesting/startApp.jpg)
@@ -158,9 +200,11 @@ root@python-server:~# python3 /home/akamy-rent/py-compile-server/test_server.py
 Server started http://PYTHON_SERVER_IP:9000
 ```
 
-#### Stage 2 complete: Compile server started
+#### Stage 2 complete: Compile server started 
 ![stage-2](./docs/smartContractTesting/compileServer.jpg)
 
+
+### In order to use Ganache you must have enabled the correct port in [the initialization of the app](#initialize)
 #### Initialize Ganache and gather account information for testing
 - Open up Ganache and select the `Quickstart` option
 
@@ -173,25 +217,54 @@ Server started http://PYTHON_SERVER_IP:9000
 ![accounts](./docs/smartContractTesting/GanacheAccounts.png)
 
 - Once your Ganache server IP and port have been set. Click the key icon to manually copy and paste `ACCOUNT ADDRESS` and `PRIVATE KEY` to wherever key data is stored.
-  - In M2 the testing page utilizes a contract object to a single homeowner and a single tenant. This object can be found in `/app/imports/api/solc/connect2compiler.js`.
-  - M3 should be communicating directly with the users and smart contract collections.
 
 ![key-pairs](./docs/smartContractTesting/AccountInfo.png)
+
+- Developers have the option to alter default user data in `/app/settings.development.json` or they can add an account with `ACCOUNT ADDRESS` in the `Wallet address `field and the `Private Key` field.
 
 #### Stage 3: Key information copied to application
 ![stage-3](./docs/smartContractTesting/Ganache.jpg)
 
-#### Navigating to the test contract page
-Now that all systems are set up, accounts are initialized the test server. Use the 4 buttons to test the smart contract.
+#### Utilizing the new functionality of deploying smart contracts
+Now all systems are set up and accounts are initialized the test server. You may now try the sign to deploy feature that's built into the smart contract signing process. Once the tenant has agreed to the terms and conditions along with both participants signing the contract you can deploy the smart contract to the test network
 
-![test-page](./docs/smartContractTesting/testContractPage.png)
-
-Use the buttons from left to right.
-- Compile smart contract.
-- Deploy it to Ganache.
-- Use the smart contract timer function.
-- Check transaction logs.
-  - Currently can only view it in console, will implement later on.
-
-#### Stage 4 completed: Test page can be used
+#### Stage 4 completed: Smart contracts can be deployed
 ![stage-4](./docs/smartContractTesting/contractProcess.jpg)
+
+### Smart contract process steps
+
+1. #### Agreement is signed by both participants and the tenant agrees to the terms of the agreement.
+#### There's no message indicating we are not on a blockchain.
+![deployyes](./docs/smartContractTesting/deployyes.png)
+2. #### The contract information is sent to the compiler server, which returns the abi and bytecode.
+```
+root@python-server:/home/akamy-rent/py-compile-server# python3 test_server.py 
+Server started http://206.189.2.161:9000
+76.173.228.38 - - [09/May/2022 07:41:27] "POST / HTTP/1.1" 200 -
+// SPDX-License-Identifier: MIT
+pragma solidity >0.8.4;
+contract Agreement{
+
+    address private homeowner = 0x7F91BD1e787121ADf7b75A7FF4eE0944Fa021B16;
+
+    function payRent(address payable _hOwner) external payable{
+        _hOwner.transfer(msg.value);
+    }
+
+    function close() external {
+        selfdestruct(payable(homeowner));
+    }
+    
+
+    fallback() external payable{}
+}
+```
+3. #### The contract can now be deployed to the blockchain. The homeowner must give an insignificant amount of Ether to initially fund the functionality of contract(not shown)
+![creation](./docs/smartContractTesting/creation.png)
+4. #### All contracts as of now can be called every second from deployment. Contracts are called 5 times before detonation.
+##### There is code to use longer time periods, but it's impossible to test those without some kind of software based time manipulation.
+![5calls](./docs/smartContractTesting/5calls.png)
+5. #### Contracts are destroyed which pays the owner. Contract destruction payments encourages Ethereum users to free-up resources of the network.
+![destroy](./docs/smartContractTesting/destroy.png)
+
+

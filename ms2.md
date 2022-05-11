@@ -93,13 +93,13 @@ Start the app as normal `meteor npm run start`
 ## Warning: Only use the insecure version of Chrome to run the AkaMy-Rent app. Using the insecure version of Chrome on other websites may lead to security breaches.
 
 As of M2 we currently do not have a workaround for the bug below other than opening an insecure Chrome instance:
-![xcors](./docs/smartContractTesting/XCORS.png)
+![xcors](./docs/M2/contractsM2/XCORS.png)
 
 In AkaMy-Rents's current state you must initialize an insecure version of Chrome:
 `open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`.
 
 #### Stage 1 complete: Application started
-![stage-1](./docs/smartContractTesting/startApp.jpg)
+![stage-1](./docs/M2/contractsM2/startApp.jpg)
 
 #### Initialize the Python Server
 - In another terminal window run : `ssh PYTHON_SERVER_USER@PYTHON_SERVER_IP` .
@@ -136,32 +136,32 @@ Server started http://PYTHON_SERVER_IP:9000
 ```
 
 #### Stage 2 complete: Compile server started
-![stage-2](./docs/smartContractTesting/compileServer.jpg)
+![stage-2](./docs/M2/contractsM2/compileServer.jpg)
 
 #### Initialize Ganache and gather account information for testing
 - Open up Ganache and select the `Quickstart` option
 
-![ganache-start](./docs/smartContractTesting/GanacheStart.png)
+![ganache-start](./docs/M2/contractsM2/GanacheStart.png)
 
 - There will be a menu filled with 10 accounts that are usable. Near the top there's a series of labels, make sure `RPC SERVER` is set to `HTTP://127.0.0.1:8545`.
   - If it's not set to that select the `gear icon near the top right corner` to change it.
   - Select `Server` in the navigation bar and make from there you can set it to the appropriate IP and port.
 
-![accounts](./docs/smartContractTesting/GanacheAccounts.png)
+![accounts](./docs/M2/contractsM2/GanacheAccounts.png)
 
 - Once your Ganache server IP and port have been set. Click the key icon to manually copy and paste `ACCOUNT ADDRESS` and `PRIVATE KEY` to wherever key data is stored.
   - In M2 the testing page utilizes a contract object to a single homeowner and a single tenant. This object can be found in `/app/imports/api/solc/connect2compiler.js`.
   - M3 should be communicating directly with the users and smart contract collections.
 
-![key-pairs](./docs/smartContractTesting/AccountInfo.png)
+![key-pairs](./docs/M2/contractsM2/AccountInfo.png)
 
 #### Stage 3: Key information copied to application
-![stage-3](./docs/smartContractTesting/Ganache.jpg)
+![stage-3](./docs/M2/contractsM2/Ganache.jpg)
 
 #### Navigating to the test contract page
 Now that all systems are set up, accounts are initialized the test server. Use the 4 buttons to test the smart contract.
 
-![test-page](./docs/smartContractTesting/testContractPage.png)
+![test-page](./docs/M2/contractsM2/testContractPage.png)
 
 Use the buttons from left to right.
 - Compile smart contract.
@@ -170,6 +170,6 @@ Use the buttons from left to right.
 - Check transaction logs.
   - Currently can only view it in console, will implement later on.
 
-#### Stage 4 completed: Test page can be used
-![stage-4](./docs/smartContractTesting/contractProcess.jpg)
+#### Stage 4 completed: The contract flow now should look like this
+![stage-4](./docs/M2/contractsM2/contractProcess.jpg)
 
