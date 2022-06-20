@@ -23,7 +23,7 @@
 
 - [AkaMy-Rent organization page repository](https://github.com/akamy-rent/akamy-rent.github.io)
 - [AkaMy-Rent project repository](https://github.com/akamy-rent/akamy-rent)
-- [www.akamy-rent.space Deployment](https://www.akamy-rent.space)
+- [~~www.akamy-rent.space Deployment~~ currently disabled](#)
 - Project boards:
   - [#1](https://github.com/akamy-rent/akamy-rent/projects/1)
   - [#2](https://github.com/akamy-rent/akamy-rent/projects/2)
